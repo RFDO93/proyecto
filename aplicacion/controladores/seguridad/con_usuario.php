@@ -5,6 +5,7 @@ $obj_aux= new clsusuario;
 $aux=$_POST['a'];
 switch ($aux) {
 	case '1':
+	echo "hola";
 		$obj_aux->get($_POST['usuario'],sha1(md5($_POST['clave'])));
 		$aux=$obj_aux->validar_usuario();
 		$aux2=$obj_aux->numrow();

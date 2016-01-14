@@ -22,11 +22,11 @@ class clsusuario extends conexcionpsql{
 
 	public function validar_usuario(){
 		$this->sql= "SELECT u.id,rec.descripcion as des,rec.ruta, per.cedula, per.nombre, per.apellido, rec.cod_recur as recur
-				     FROM usuario as u inner join clave as c on c.cod_usuario=u.id
-					 inner join detalle_rol_recurso as drr on drr.cod_rol=u.cod_rol
-					 inner join recursos as rec on rec.id=drr.cod_recursos
-                     inner join persona as per on per.cedula=u.cod_cedula
-                     where u.usuario='$this->get_usuario' and c.clave='$this->get_clave' ";
+					FROM usuario as u inner join clave as c on c.cod_usuario=u.id
+					inner join d_rol_recurso as drr on drr.cod_rol=u.cod_rol
+					inner join recursos as rec on rec.id = drr.cod_recurso
+					inner join persona as per on per.cedula=u.cod_cedula
+                    where u.usuario='$this->get_usuario' and c.clave='$this->get_clave' ";
 		$this->retornar=parent::consulta($this->sql);
 		$auxexis=pg_num_rows($this->retornar);
         if($auxexis>0){
