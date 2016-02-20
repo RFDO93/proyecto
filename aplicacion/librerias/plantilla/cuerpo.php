@@ -7,7 +7,7 @@ class cuerpo {
     public function a(){
         $des="
             <!DOCTYPE html>
-            <html lang='en'>
+            <html lang='es'>
 
             <head>
 
@@ -31,9 +31,12 @@ class cuerpo {
                     <script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script>
                 <![endif]-->
 
+                <!-- Bootstrap Date-Picker Plugin -->
+                <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css'/>
             </head>
 
             <body>
+            <br><br><br><br>
         ";
         return $des;
     }
@@ -42,10 +45,30 @@ class cuerpo {
         $des="
             <!-- jQuery -->
             <script src='../../../publica/js/bootstrap-js/jquery.min.js'></script>
-            <!-- jQuery -->
+            <!--Bootstrap js -->
             <script src='../../../publica/js/bootstrap-js/bootstrap.min.js'></script>
-        </body>
-        </html>
+            
+            <!-- Bootstrap Date-Picker Plugin -->
+
+            <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js'></script>       
+        ";
+        return $des;
+    }
+
+    public function calendario(){
+        $des="
+        <div class='col-sm-6'>
+            <div class='form-group'>
+                <div class='input-group date' id='aux'>
+                    <input type='text' class='form-control' />
+                    <span class='input-group-addon'>
+                        <span class='glyphicon glyphicon-calendar'></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+
         ";
         return $des;
     }

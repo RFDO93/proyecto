@@ -1,6 +1,6 @@
 <?php
 session_start();
-require("../../librerias/plantilla/cuerpo.php");
+include_once("../../librerias/plantilla/cuerpo.php");
     $obj_cuerpo= new cuerpo;
     echo $obj_cuerpo->a();
 ?>
@@ -35,3 +35,5 @@ require("../../librerias/plantilla/cuerpo.php");
 <?php
     echo $obj_cuerpo->b();
 ?>
+    </body>
+</html>

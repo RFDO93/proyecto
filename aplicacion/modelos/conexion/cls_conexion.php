@@ -15,7 +15,7 @@
 
         //función que se utilizara al momento de hacer la instancia de la clase
         public function conectar(){
-           $aux=pg_connect("host='localhost' dbname='proyecto' user='dorta' password='dorta'") or die('La ergue fallo: ' . pg_last_error());
+           $aux=pg_connect("host='localhost' dbname='apuesta' user='apuesta' password='apuesta'") or die('La ergue fallo: ' . pg_last_error());
            return $aux;
          }       
 
